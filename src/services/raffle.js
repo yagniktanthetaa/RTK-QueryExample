@@ -23,8 +23,22 @@ export const rafffleApi = createApi({
         providesTags: ["Post"],
       }),
     }),
+    // getDataByToken: builder.mutation({
+    //   query: (data) => ({
+    //     url: `/getDataByToken`,
+    //     method: "POST",
+    //     headers: {
+    //       "Content-type": "application/json; charset=UTF-8",
+    //     },
+    //     body: data,
+    //   }),
+    //   invalidatesTags: ["Post"],
+    // }),
   }),
 });
 
-export const { useLazyGetRaffflesQuery, useLazyGetDataByTokenQuery } =
-  rafffleApi;
+export const {
+  useLazyGetRaffflesQuery,
+  useLazyGetDataByTokenQuery,
+  //   useGetDataByTokenMutation,
+} = rafffleApi;
